@@ -16,5 +16,14 @@ type ScrapeInput struct {
 	NetWeight           float32 `json:"net_weight"`
 }
 
+type ProductionProcess struct {
+	PlateCount       int       `json:"plate_count"` //6.3 weight
+	CircleSize       float32   `json:"circle_size"`
+	ScrapeNames      []string  `json:"scrape_names"`
+	ScrapeQuantities []float32 `json:"scrape_quantities"`
+}
+
 type ProductionLineInput struct {
+	CruisibleCount      int                 `json:"cruisible_count"` //470 kgs
+	ProcessManipulation []ProductionProcess `json:"process_manip"`
 }
